@@ -1,6 +1,6 @@
 {
   "name": "express-quicklee",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cacheing common requests on your node server of a the fastest response",
   "main": "src/express-quicklee.min.js",
   "scripts": {

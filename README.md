@@ -22,12 +22,12 @@ app.get('/', function (req, res) {
 
 ```
 
-# Options Object
+# Options
 
-You can also limit (default is no limit) the size of the cache and the selected strategy ('lru' or 'lfu' which is the default):  
+You can also limit the size of the cache (default is no limit), and the selected strategy (``'lru'`` or ``'lfu'`` which is the default):  
 
 ```angular2html
-app.use(quicklee( {limit: 10000, strategy: 'lru'));
+app.use(quicklee( { limit: 10000, strategy: 'lru' });
 ```
 
 

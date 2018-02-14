@@ -1,0 +1,41 @@
+{
+  "name": "express-quicklee",
+  "version": "1.0.0",
+  "description": "Cacheing common requests on your node server of a quick response",
+  "main": "src/express-quicklee.min.js",
+  "scripts": {
+    "start": "babel-node ./test/server.js --presets es2015,stage-2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kfirm/express-quicklee.git"
+  },
+  "keywords": [
+    "cache",
+    "caching",
+    "express",
+    "express cache",
+    "express caching"
+  ],
+  "author": "Kfir Marouani <dev.kfir@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kfirm/express-quicklee/issues"
+  },
+  "homepage": "https://github.com/kfirm/express-quicklee",
+  "devDependencies": {
+    "axios": "^0.17.1",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "express": "^4.16.2",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "cachelee": "^1.0.0"
+  }
+}

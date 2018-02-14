@@ -1,0 +1,6 @@
+.babelrc
+test/
+./test/
+test
+./test
+gulpfile.js

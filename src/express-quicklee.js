@@ -63,5 +63,4 @@ module.exports = function (options) {
     cacheMachine = new Cachelee.Cache(options);
 
     return expressQuickleeMiddleware;
-
 };

@@ -4,7 +4,7 @@
   "description": "Cacheing common requests on your node server of a the fastest response",
   "main": "src/express-quicklee.min.js",
   "scripts": {
-    "start": "babel-node ./test/server.js --presets es2015,stage-2"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",

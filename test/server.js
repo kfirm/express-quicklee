@@ -15,8 +15,6 @@ app.get('/cache', function (req, res) {
     axios.get(url).then(function (article) {
         res.send(article.data);
     });
-
-
 });
 
 app.listen(3001);

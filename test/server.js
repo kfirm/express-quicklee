@@ -8,7 +8,7 @@ var app = express();
 var url = 'http://www.mocky.io/v2/5a82df142f00004c0074bbdf';
 
 
-app.use(quicklee);
+app.use(quicklee({limit: 100, strategy: "lru"}));
 
 app.get('/cache', function (req, res) {
 

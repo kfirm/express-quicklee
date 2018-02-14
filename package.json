@@ -36,6 +36,6 @@
     "gulp-uglify": "^3.0.0"
   },
   "dependencies": {
-    "cachelee": "^1.0.0"
+    "cachelee": "^1.0.3"
   }
 }

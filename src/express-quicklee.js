@@ -1,7 +1,6 @@
 var Cachelee = require('cachelee');
 
-var cacheMachine = new Cachelee.Cache({limit: 1000, strategy: Cachelee.Strategy.LeastFrequentlyUsed});
-
+var cacheMachine = null;
 
 /***
  * This is a generator of a key for caching.
@@ -22,7 +21,7 @@ function requestHash(request) {
     return JSON.stringify(requestHashObject);
 }
 
-module.exports = function (req, res, next) {
+function expressQuickleeMiddleware(req, res, next) {
 
     var requestCacheKey = requestHash(req);
     var cachedResponse = cacheMachine.get(requestCacheKey);
@@ -47,4 +46,22 @@ module.exports = function (req, res, next) {
 
         next();
     }
+}
+
+module.exports = function (options) {
+
+    if (options){
+        if (options.strategy && options.strategy.toLowerCase() === "lfu"){
+            options.strategy = Cachelee.Strategy.LeastFrequentlyUsed
+        } else if (options.strategy && options.strategy.toLowerCase() === "lru"){
+            options.strategy = Cachelee.Strategy.LeastRecentlyUsed;
+        } else if (options.strategy){
+            console.warn('Unknown strategy ' + options.strategy + '. Using default (LFU).')
+        }
+    }
+
+    cacheMachine = new Cachelee.Cache(options);
+
+    return expressQuickleeMiddleware;
+
 };
